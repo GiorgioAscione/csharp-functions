@@ -1,7 +1,18 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
-int[] mioArray = { 2, 6, 7, 5, 3, 9 };
+Console.WriteLine("Inserisci il numero di elementi");
+int numeroElementi = int.Parse(Console.ReadLine());
+int[] arrayElementi = new int[numeroElementi];
+
+for (int i = 0; i < arrayElementi.Length ; i++)
+{
+    int elementiInseritiUtente = int.Parse(Console.ReadLine());
+    arrayElementi[i] = elementiInseritiUtente;
+    
+}
+
+int[] mioArray = arrayElementi;
 StampaArray(mioArray);
 
 int[] mioArray2 = ElevaArrayAlQuadrato(mioArray);
@@ -36,9 +47,9 @@ void StampaArray(int[] array)
 }
 
 int Quadrato(int numero)
-{ 
+{
 
-int potenza = numero * numero;
+    int potenza = numero * numero;
     return potenza;
 }
 
@@ -65,8 +76,3 @@ int sommaElementiArray(int[] array)
     }
     return somma;
 }
-
-
-
-    
-
